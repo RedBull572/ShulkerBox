@@ -14,6 +14,7 @@ use pocketmine\item\Item;
 class Main extends PluginBase implements Listener {
 
 public function onLoad(){
+       /** @noinspection PhpUnhandledExceptionInspection*/
 	Tile::registerTile(ShulkerTile::class);
         BlockFactory::registerBlock(new ShulkerBox(Block::UNDYED_SHULKER_BOX), true);
 	BlockFactory::registerBlock(new ShulkerBox(), true);
