@@ -71,7 +71,6 @@ class ShulkerBox extends Transparent {
 	}
 
 	public function onActivate(Item $item, Player $player = null): bool{
-		if(Main::$shulkerEnable){
 			if($player instanceof Player){
 				$t = $this->getLevel()->getTile($this);
 				if(!($t instanceof ShulkerTile)){
@@ -80,7 +79,6 @@ class ShulkerBox extends Transparent {
 				if($player->isSneaking()){
 			  	}else{
 				$player->addWindow($t->getInventory());
-				}
 			}
 		}
 
