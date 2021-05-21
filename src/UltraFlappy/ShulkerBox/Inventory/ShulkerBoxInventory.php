@@ -13,6 +13,9 @@ use pocketmine\Player;
 
 class ShulkerBoxInventory extends ContainerInventory {
 
+/**
+ * @var ShulkerBox
+ */
 protected $holder;
 
 	public function __construct(ShulkerBox $tile){
@@ -39,6 +42,9 @@ protected $holder;
 		}
 	}
 
+ /**
+  * @param  ShulkerBox
+  */
 	public function getHolder(){
 		return $this->holder;
 	}
