@@ -43,7 +43,7 @@ protected $holder;
 	}
 
  /**
-  * @param  ShulkerBox
+  * @return  ShulkerBox
   */
 	public function getHolder(){
 		return $this->holder;
