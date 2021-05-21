@@ -13,11 +13,8 @@ use pocketmine\item\Item;
 
 class Main extends PluginBase implements Listener {
 
-public static $shulkerEnable = true;
-
 public function onLoad(){
 	Tile::registerTile(ShulkerTile::class);
-	//BlockFactory::registerBlock(new ShulkerBox(Block::UNDYED_SHULKER_BOX), true);
 	BlockFactory::registerBlock(new ShulkerBox(), true);
 	Item::initCreativeItems();
    }
