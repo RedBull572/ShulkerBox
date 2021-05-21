@@ -23,9 +23,9 @@ class ShulkerBox extends Transparent {
 		$this->meta = $meta;
 	}
 
-	public function getResistance(): float{
-		return 30;
-	}
+	public function getBlastResistance(): float {
+                return 30;
+        }
 
 	public function getHardness(): float{
 		return 2;
