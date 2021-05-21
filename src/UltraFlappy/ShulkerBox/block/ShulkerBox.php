@@ -50,35 +50,35 @@ class ShulkerBox extends Transparent {
 
               if($player->isCreative()){
 		($inv = $player->getInventory())->clear($inv->getHeldItemIndex());
-     }
+        }
 		return true;
-	}
+     }
 
 	public function onBreak(Item $item, Player $player = null): bool{
 		$t = $this->getLevel()->getTile($this);
 		if($t instanceof ShulkerTile){
-			$item = ItemFactory::get($this->id, $this->id != self::UNDYED_SHULKER_BOX ? $this->meta : 0, 1);
-			$itemNBT = clone $item->getNamedTag();
-			$itemNBT->setTag($t->getCleanedNBT()->getTag(Container::TAG_ITEMS));
-			$item->setNamedTag($itemNBT);
-			$this->getLevel()->dropItem($this->add(0.5,0.5,0.5), $item);
+		 $item = ItemFactory::get($this->id, $this->id != self::UNDYED_SHULKER_BOX ? $this->meta : 0, 1);
+		 $itemNBT = clone $item->getNamedTag();
+		 $itemNBT->setTag($t->getCleanedNBT()->getTag(Container::TAG_ITEMS));
+		 $item->setNamedTag($itemNBT);
+		 $this->getLevel()->dropItem($this->add(0.5,0.5,0.5), $item);
 
-			$t->getInventory()->clearAll();
-		}
-		$this->getLevel()->setBlock($this, Block::get(Block::AIR), true, true);
+		 $t->getInventory()->clearAll();
+		  }
+		 $this->getLevel()->setBlock($this, Block::get(Block::AIR), true, true);
 
 		return true;
 	}
 
 	public function onActivate(Item $item, Player $player = null): bool{
-			if($player instanceof Player){
-				$t = $this->getLevel()->getTile($this);
-				if(!($t instanceof ShulkerTile)){
-					$t = Tile::createTile(Tile::SHULKER_BOX, $this->getLevel(), ShulkerTile::createNBT($this));
-				}
-				if($player->isSneaking()){
-			  	}else{
-				$player->addWindow($t->getInventory());
+		if($player instanceof Player){
+		  $t = $this->getLevel()->getTile($this);
+		  if(!($t instanceof ShulkerTile)){
+	            $t = Tile::createTile(Tile::SHULKER_BOX, $this->getLevel(), ShulkerTile::createNBT($this));
+			}
+		    if($player->isSneaking()){
+			 }else{
+			$player->addWindow($t->getInventory());
 			}
 		}
 
