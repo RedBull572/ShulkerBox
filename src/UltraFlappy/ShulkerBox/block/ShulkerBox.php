@@ -6,7 +6,9 @@ use UltraFlappy\ShulkerBox\tile\
   ShulkerBox as ShulkerTile;
 use UltraFlappy\ShulkerBox\tile\Tile;
 use UltraFlappy\ShulkerBox\Main;
-use pocketmine\block\{Block, BlockToolType, Transparent};
+use pocketmine\block\Block;
+use pocketmine\block\BlockToolType;
+use pocketmine\block\Transparent;
 use pocketmine\tile\Container;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
