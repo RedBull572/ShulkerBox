@@ -2,8 +2,7 @@
 
 namespace UltraFlappy\ShulkerBox\block;
 
-use UltraFlappy\ShulkerBox\tile\
-  ShulkerBox as ShulkerTile;
+use UltraFlappy\ShulkerBox\tile\ShulkerBox as ShulkerTile;
 use UltraFlappy\ShulkerBox\tile\tile as Tile;
 use pocketmine\block\Block;
 use pocketmine\block\BlockToolType;
