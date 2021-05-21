@@ -5,7 +5,6 @@ namespace UltraFlappy\ShulkerBox\block;
 use UltraFlappy\ShulkerBox\tile\
   ShulkerBox as ShulkerTile;
 use UltraFlappy\ShulkerBox\tile\tile as Tile;
-use UltraFlappy\ShulkerBox\Main;
 use pocketmine\block\Block;
 use pocketmine\block\BlockToolType;
 use pocketmine\block\Transparent;
@@ -14,7 +13,6 @@ use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\Player;
 use pocketmine\math\Vector3;
-
 
 class ShulkerBox extends Transparent {
 
@@ -50,7 +48,7 @@ class ShulkerBox extends Transparent {
 		}
 		Tile::createTile(Tile::SHULKER_BOX, $this->getLevel(), $nbt);
 
-     if($player->isCreative()){
+              if($player->isCreative()){
 		($inv = $player->getInventory())->clear($inv->getHeldItemIndex());
      }
 		return true;
