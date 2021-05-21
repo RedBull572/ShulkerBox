@@ -6,5 +6,5 @@ projects:
   PM-Shulkerbox:
     path: ""
 lint:
-    phpstan: false
+  phpstan: false
 ...
