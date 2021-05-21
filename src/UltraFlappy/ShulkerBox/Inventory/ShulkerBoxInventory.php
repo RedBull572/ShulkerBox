@@ -31,14 +31,17 @@ protected $holder;
 		return WindowTypes::CONTAINER;
 	}
 
-	public function onOpen(Player $who): void{
-		parent::onOpen($who);
-		if(count($this->getViewers()) === 1 && ($level = $this->getHolder()->getLevel()) instanceof Level){
-			$this->broadcastBlockEventPacket($this->getHolder(), true);
-			$level->broadcastLevelSoundEvent($this->getHolder()->add(0.5, 0.5, 0.5), LevelSoundEventPacket::SOUND_SHULKERBOX_OPEN);
-		}
+	public function onOpen(Player $who) : void{
+	 parent::onOpen($who);
+        if(count($this->getViewers()) === 1 && ($level = $this->getHolder()->getLevel()) instanceof Level){
+         $this->broadcastBlockEventPacket(true);
+	 $level->broadcastLevelSoundEvent($this->getHolder()->add(0.5, 0.5, 0.5), LevelSoundEventPacket::SOUND_SHULKER_OPEN);
+	  }
 	}
 
+     	/**
+	 * @return ShulkerBox
+	 */
 	public function getHolder(){
 		return $this->holder;
 	}
@@ -49,9 +52,9 @@ protected $holder;
 		$pk->y = (int)$vector->y;
 		$pk->z = (int)$vector->z;
 		$pk->eventType = 1;
-		$pk->eventData = $isOpen ? 1 : 0;
-		$this->getHolder()->getLevel()->addChunkPacket($this->getHolder()->getX() >> 4, $this->getHolder()->getZ() >> 4, $pk);
-	}
+		$pk->eventData = +$isOpen;
+		$holder->getLevel()->addChunkPacket($holder->getX() >> 4, $holder->getZ() >> 4, $pk);
+        }
 
 	public function onClose(Player $who): void{
 		if(count($this->getViewers()) === 1 && ($level = $this->getHolder()->getLevel()) instanceof Level){
