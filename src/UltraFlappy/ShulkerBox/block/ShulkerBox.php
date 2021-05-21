@@ -73,6 +73,7 @@ class ShulkerBox extends Transparent {
 		if($player instanceof Player){
 		  $t = $this->getLevel()->getTile($this);
 		  if(!($t instanceof ShulkerTile)){
+			/** @var ShulkerTile $t */
 	            $t = Tile::createTile(Tile::SHULKER_BOX, $this->getLevel(), ShulkerTile::createNBT($this));
 			}
 		    if($player->isSneaking()){
