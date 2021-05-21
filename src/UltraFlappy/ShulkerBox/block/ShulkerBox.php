@@ -18,6 +18,8 @@ use pocketmine\math\Vector3;
 
 class ShulkerBox extends Transparent {
 
+   protected $id = self::SHULKER_BOX;
+
 	public function __construct(int $id = self::SHULKER_BOX, int $meta = 0){
 		$this->id = $id;
 		$this->meta = $meta;
