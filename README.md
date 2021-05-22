@@ -1,3 +1,5 @@
+[![Total](https://img.shields.io/github/downloads/UltraFlappy/ShulkerBox/total.svg)]()
+
 # Shulkerbox
 
 ![Rotating ShulkerBox](./Screenshot_20210521-215552_Minecraft.png)
