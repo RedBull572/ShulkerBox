@@ -4,6 +4,7 @@ namespace UltraFlappy\ShulkerBox\block;
 
 use UltraFlappy\ShulkerBox\tile\ShulkerBox as ShulkerTile;
 use UltraFlappy\ShulkerBox\tile\tile as Tile;
+use pocketmine\block\utils\ColorBlockMetaHelper;
 use pocketmine\block\Block;
 use pocketmine\block\BlockToolType;
 use pocketmine\block\Transparent;
@@ -34,8 +35,8 @@ class ShulkerBox extends Transparent {
 		return BlockToolType::TYPE_PICKAXE;
 	}
 
-	public function getName(): string{
-		return "Shulker Box";
+	public function getName() : string{
+		return ColorBlockMetaHelper::getColorFromMeta($this->getVariant()) . " Shulker Box";
 	}
 
 	public function place(Item $item, Block $blockReplace, Block $blockClicked, int $face, Vector3 $clickVector, Player $player = null): bool{
