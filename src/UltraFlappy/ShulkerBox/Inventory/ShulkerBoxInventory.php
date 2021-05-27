@@ -3,6 +3,7 @@
 namespace UltraFlappy\ShulkerBox\Inventory;
 
 use UltraFlappy\ShulkerBox\tile\ShulkerBox;
+use UltraFlappy\ShulkerBox\block\ShulkerBox as Sblock;
 use pocketmine\inventory\ContainerInventory;
 use pocketmine\block\utils\ColorBlockMetaHelper;
 use pocketmine\level\Level;
@@ -15,9 +16,10 @@ use pocketmine\Player;
 class ShulkerBoxInventory extends ContainerInventory
 {
 
-/**
- * @var ShulkerBox
- */
+  /**
+   * @var ShulkerBox
+   * @var Sblock
+   */
     protected $holder;
 
     public function __construct(ShulkerBox $tile)
@@ -26,7 +28,7 @@ class ShulkerBoxInventory extends ContainerInventory
     }
 
     /**
-     * @return string
+     * @return Sblock
      */
     public function getName(): string
     {
