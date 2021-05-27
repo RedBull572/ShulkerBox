@@ -51,7 +51,7 @@ class ShulkerBox extends Spawnable implements InventoryHolder, Container, Nameab
 	 */
 	public function getFacing() : int{
 		return $this->facing;
-	}
+}
 
 	/**
 	 * @return int
