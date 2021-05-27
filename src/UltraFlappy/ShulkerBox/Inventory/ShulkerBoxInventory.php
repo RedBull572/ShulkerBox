@@ -72,7 +72,7 @@ class ShulkerBoxInventory extends ContainerInventory
         $pk->eventData = $isOpen ? 1 : 0;
         $this->getHolder()->getLevel()->addChunkPacket($this->getHolder()->getX() >> 4, $this->getHolder()->getZ() >> 4, $pk);
     }
- 
+
     /**
      * @param Player $who
      */
