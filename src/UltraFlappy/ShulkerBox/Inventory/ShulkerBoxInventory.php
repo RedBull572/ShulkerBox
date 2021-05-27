@@ -3,6 +3,7 @@
 namespace UltraFlappy\ShulkerBox\Inventory;
 
 use UltraFlappy\ShulkerBox\tile\ShulkerBox;
+use pocketmine\block\utils\ColorBlockMetaHelper;
 use pocketmine\inventory\ContainerInventory;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
@@ -23,9 +24,8 @@ protected $holder;
 	}
 
 	public function getName(): string{
-		return "Shulker Box";
+		return ColorBlockMetaHelper::getColorFromMeta($this->getVariant()) . " Shulker Box";
 	}
-
 	public function getDefaultSize(): int{
 		return 27;
 	}
