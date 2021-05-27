@@ -89,4 +89,5 @@ class ShulkerBox extends Transparent {
 	public function getDrops(Item $item): array{
 		return [];
 	}
+
 }
