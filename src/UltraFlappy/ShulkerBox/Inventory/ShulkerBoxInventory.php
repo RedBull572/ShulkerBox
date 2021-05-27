@@ -15,9 +15,9 @@ use pocketmine\Player;
 class ShulkerBoxInventory extends ContainerInventory
 {
 
-/**
- * @var ShulkerBox
- */
+  /**
+   * @var ShulkerBox
+   */
     protected $holder;
 
     public function __construct(ShulkerBox $tile)
@@ -26,7 +26,7 @@ class ShulkerBoxInventory extends ContainerInventory
     }
 
     /**
-     * @return string
+     * @return ShulkerBox
      */
     public function getName(): string
     {
