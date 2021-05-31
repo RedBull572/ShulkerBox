@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace UltraFlappy\ShulkerBox\Item;
 
 use pocketmine\block\Block;
@@ -15,8 +13,6 @@ use pocketmine\item\Item;
 class ShulkerBox extends Item
 
 {
-
-  
 
     public function __construct(int $id, int $meta = 0)
 
