@@ -10,8 +10,6 @@ use pocketmine\item\Item;
 class ShulkerBox extends Item
 {
 
- protected $id = "Shulker Box";
-
     public function __construct(int $id, int $meta = 0)
     {
         parent::__construct($id, $meta, $id = Block::UNDYED_SHULKER_BOX ? "Shulker Box" : ColorBlockMetaHelper::getColorFromMeta($meta)." Shulker Box");
