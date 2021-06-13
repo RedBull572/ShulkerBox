@@ -33,7 +33,7 @@ class ShulkerBox extends Spawnable implements InventoryHolder, Container, Nameab
     protected $isUndyed = true;
 
     /** @var ShulkerBoxInventory */
-    protected $inventory;
+    protected $inventory = null;
 
     /**
      * @param int $facing
