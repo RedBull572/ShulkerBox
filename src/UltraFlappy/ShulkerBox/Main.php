@@ -24,20 +24,21 @@ class Main extends PluginBase implements Listener
         ItemFactory::registerItem(new ShulkerItem(Block::SHULKER_BOX), true);
         ItemFactory::registerItem(new ShulkerItem(Block::UNDYED_SHULKER_BOX), true);
         Item::initCreativeItems();
-        $this->getServer()->getCraftingManager()->registerShapedRecipe(new ShapedRecipe(
-				[
-					" A ",
-					" B ",
-					" A "
-				],
-				[
-					"A" => ItemFactory::get(Item::SHULKER_SHELL),
-					"B" => ItemFactory::get(Item::CHEST)
-				],
-				[ItemFactory::get(Item::UNDYED_SHULKER_BOX)]
-			)
-		);
-	}
+        $this->getServer()->getCraftingManager()->registerShapedRecipe(
+            new ShapedRecipe(
+            [
+                    " A ",
+                    " B ",
+                    " A "
+                ],
+            [
+                    "A" => ItemFactory::get(Item::SHULKER_SHELL),
+                    "B" => ItemFactory::get(Item::CHEST)
+                ],
+            [ItemFactory::get(Item::UNDYED_SHULKER_BOX)]
+        )
+        );
+    }
     public function onEnable()
     {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
