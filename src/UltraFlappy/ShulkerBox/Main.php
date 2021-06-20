@@ -4,10 +4,10 @@ namespace UltraFlappy\ShulkerBox;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use UltraFlappy\ShulkerBox\tile\ShulkerBox as ShulkerTile;
 use pocketmine\tile\Tile;
 use pocketmine\block\Block;
 use pocketmine\item\ItemFactory;
+use UltraFlappy\ShulkerBox\tile\ShulkerBox as ShulkerTile;
 use UltraFlappy\ShulkerBox\block\ShulkerBox;
 use UltraFlappy\ShulkerBox\Item\ShulkerBox as ShulkerItem;
 use pocketmine\block\BlockFactory;
