@@ -32,13 +32,15 @@ class Main extends PluginBase implements Listener
         $data = $this->getDataFolder() . "recipes.json";
         $itemDeserializerFunc = \Closure::fromCallable([Item::class, 'jsonDeserialize']);
         $recipes = json_decode(file_get_contents($data), true);
+        if(isset($recipes)){
         foreach ($recipes["shaped"] as $recipe) {
             $this->getServer()->getCraftingManager()->registerShapedRecipe(new ShapedRecipe(
                 $recipe["shape"],
                 array_map($itemDeserializerFunc, $recipe["input"]),
                 array_map($itemDeserializerFunc, $recipe["output"])
             ));
-        }
+          }
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        }
     }
 }
