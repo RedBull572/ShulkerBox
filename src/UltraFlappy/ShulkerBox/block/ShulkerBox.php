@@ -54,8 +54,8 @@ class ShulkerBox extends Transparent
         }
         Tile::createTile(Tile::SHULKER_BOX, $this->getLevel(), $nbt);
 
-        if (!$player->isCreative()) {
-            $item->pop();
+        if ($player->isCreative()) {
+            ($inv = $player->getInventory())->clear($inv->getHeldItemIndex());
         }
         return true;
     }
